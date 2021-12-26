@@ -13,6 +13,7 @@ int main(){
     char input[30]={0};
     char order[6]={0};
     char command[30]={0};
+    char checkInput[30]={0};
     int check=0;
     int checkPush=0;
 
@@ -30,7 +31,7 @@ int main(){
         printf(">");
         printf("\033[0m");
         fgets(input, 50, stdin);
-        check=sscanf(input, " %s %s", order, command);
+        check=sscanf(input, " %s %s %s", order, command, checkInput);
 
 
         if(strcmp(order, "md")==0 && check==2){
